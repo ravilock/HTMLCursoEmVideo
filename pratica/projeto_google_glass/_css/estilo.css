@@ -12,7 +12,7 @@ div#interface {
     padding: 10px 30px 10px 30px;
 }
 
-header#cabecalho figure#icone {
+header#cabecalho figure#icone, header#cabecalho figure#icone-specs {
     position: absolute;
     left: 1300px;
     top: 70px;
@@ -133,27 +133,50 @@ section#corpo {
     display: block;
     width: 550px;
     float: left;
-    border-right: 1px double black;
     padding-right: 10px;
+}
+
+section#corpo h1, section#corpo-specs h1 {
+    font-family: url("../_fonts/computer-font.ttf");
+    font: url("../_fonts/computer-font.ttf");
+    background-color: #cfcfcf;
+    color: #505050;
+    padding-left: 5px;
 }
 
 table#especificacoes {
     border: 1px solid #606060;
     border-spacing: 0px;
     margin-left: auto;
-    margin-right: auto ;
+    margin-right: auto;
+}
+
+table#especificacoes caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#especificacoes caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 10pt;
+    margin-top: 8px;
+    font-weight: normal;
 }
 
 table#especificacoes td {
     border: 1px solid #606060;
     padding: 10px;
-    vertical-align: top;
 }
 
 table#especificacoes td.titulo {
     text-align: right;
-    background-color: #707070;
-    font-weight: bolder;
+    color: white;
+    background-color: #606060;
+    font-weight: normal;
+    vertical-align: top;
 }
 
 table#especificacoes td.dado {
@@ -163,6 +186,8 @@ table#especificacoes td.dado {
 
 aside#lateral {
     display: block;
+    border-left: 1px double black;
+    padding-left: 10px;
     width: 400px;
     float: right
 }
@@ -175,4 +200,14 @@ footer#rodape {
 
 footer#rodape p {
     text-align: center;
+}
+
+/* Configurações da seção corpo da página specs.html */
+
+section#corpo-specs h1 {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+header#cabecalho figure#icone-specs {
+    top: 40px;
 }
