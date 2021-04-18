@@ -2,6 +2,16 @@
 body {
     background-color: #dddddd;
     color: rgb(27, 39, 39);
+    font-family: Arial, sans-serif;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+a {
+    text-decoration: none;
 }
 
 div#interface {
@@ -14,8 +24,8 @@ div#interface {
 
 header#cabecalho figure#icone, header#cabecalho figure#icone-specs {
     position: absolute;
-    left: 1300px;
-    top: 70px;
+    left: 1250px;
+    top: 50px;
 }
 
 figure#icone figcaption {
@@ -29,9 +39,9 @@ header#cabecalho {
 }
 
 header#cabecalho h1 {
-    font-family: url("../_fonts/computer-font.ttf") sans-serif;
+    font-family: url("../_fonts/computer-font.ttf"), sans-serif;
     font-size: 30pt;
-    color: #606060;
+    color: #555555;
     padding: 0;
     margin-bottom: 0px;
 }
@@ -42,11 +52,6 @@ header#cabecalho h2 {
     color: #888888;
     padding: 0;
     margin-top: 0px;
-}
-
-p {
-    text-align: justify;
-    text-indent: 20px;
 }
 
 /* Formatação de imagens com legendas */
@@ -127,7 +132,7 @@ nav#menu a {
     text-decoration: none;
 }
 
-/* Configuração da seção corpo */
+/* Configuração da section corpo */
 
 section#corpo {
     display: block;
@@ -136,12 +141,39 @@ section#corpo {
     padding-right: 10px;
 }
 
-section#corpo h1, section#corpo-specs h1 {
-    font-family: url("../_fonts/computer-font.ttf");
-    font: url("../_fonts/computer-font.ttf");
-    background-color: #cfcfcf;
+/* Configuração do artigo dentro da section corpo */
+
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #555555;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 5px 10px 5px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: url("../_fonts/computer-font.ttf"), sans-serif;
+    font-size: 20pt;
     color: #505050;
-    padding-left: 5px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 12pt;
+    color: #303030;
+}
+
+header#cabecalho-artigo h3 span {
+    display: block;
+    text-align: right;
 }
 
 table#especificacoes {
@@ -185,11 +217,30 @@ table#especificacoes td.dado {
 }
 
 aside#lateral {
+    background-color: #cfcfcf;
     display: block;
     border-left: 1px double black;
+    margin-top: 15px;
     padding-left: 10px;
+    padding-right: 10px;
     width: 400px;
-    float: right
+    float: right;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+aside#lateral h1 {
+    font-family: url("../_fonts/computer-font.ttf"), sans-serif;
+    font-size: 20pt;
+    color: #505050;
+}
+
+aside#lateral h2 {
+    font-family: sans-serif;
+    font-size: 13pt;
+    background-color: #606060;
+    color: #ffffff;
+    padding: 5px;
+    text-align: left;
 }
 
 footer#rodape {
