@@ -1,0 +1,39 @@
+table#especificacoes {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#especificacoes caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#especificacoes caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 10pt;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+table#especificacoes td {
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+table#especificacoes td.titulo {
+    text-align: right;
+    color: white;
+    background-color: #606060;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+table#especificacoes td.dado {
+    text-align: center;
+    background-color: #cfcfcf;
+}

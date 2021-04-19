@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name='viewport' content="width = device-width, initial-scale = 1" />
-    <script>
-
-    </script>
+    <title>Especificações do Google Glass</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="_css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="_css/specs.css" />
 </head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
 
 <body>
     <div id="interface">
@@ -20,29 +21,55 @@
             <nav id="menu">
                 <h1>Menu Principal</h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="specs.html">Especificações</a></li>
-                    <li><a href="fotos.html">Fotos</a></li>
-                    <li><a href="multimidia.html">Multimídia</a></li>
-                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmousemove="mudaIcone('_imagens/home.png')"
+                        onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+                    <li onmousemove="mudaIcone('_imagens/especificacoes.png')">
+                        <a href="specs.html">Especificações</a>
+                    </li>
+                    <li onmousemove="mudaIcone('_imagens/fotos.png')"
+                        onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a>
+                    </li>
+                    <li onmousemove="mudaIcone('_imagens/multimidia.png')"
+                        onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a>
+                    </li>
+                    <li onmousemove="mudaIcone('_imagens/contato.png')"
+                        onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale
+                            conosco</a></li>
                 </ul>
             </nav>
-            <figure id="icone-specs">
-                <img src="_imagens/especificacoes.png">
+            <figure id="icone">
+                <img src="_imagens/especificacoes.png" id="foto">
             </figure>
         </header>
-        <section id="corpo-specs">
-            <h3>Glass > Especificações</h3>
-            <h1>Raio-X no Google Glass</h1>
-            <h2>por Gustavo Guanabara <span id="data">Atualizado em 01/Maio/2013</span></h2>
-            <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass.
-                Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p1>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <h3>Glass > Especificações</h3>
+                    <h1>Raio-X no Google Glass</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3><span>Atualizado em 01/Maio/2013</span></h3>
+                </header>
+                <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google
+                    Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+            </article>
+        </section>
+        <section id="conteudo">
             <figure id="info">
-                <img src="_imagens/glass-esquema-marcado.jpg" />
+                <img src="_imagens/glass-esquema-marcado.jpg" usemap="#mapa" />
+                <map name="mapa">
+                    <area shape="rect" coords="179,202,270,260" onclick="mudaIFrame('tela.html')" href="#">
+                    <area shape="poly" coords="23,141,86,216, 85, 259, 23, 169" onclick="mudaIFrame('bateria.html')"
+                        href="#">
+                    <area shape="circle" coords="158, 244, 12" onclick="mudaIFrame('camera.html')" href="#">
+                    <area shape="circle" coords="77, 51, 14" onclick="mudaIFrame('sensores.html')" href="#">
+                </map>
             </figure>
+            <iframe src="google-glass.html" name="framespec" id="framespec"></iframe>
+            </article>
         </section>
         <footer id="rodape">
-            Copyright 2013 - by Gustavo Guanabara Facebook | Twitter
+            <p>Copyright 2013 - by Gustavo Guanabara </br>
+                Facebook | Twitter</p>
         </footer>
     </div>
 </body>

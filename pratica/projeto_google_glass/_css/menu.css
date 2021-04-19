@@ -1,0 +1,42 @@
+/* Formatação do Menu */
+
+@charset "utf-8";
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 800px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: rgba(179, 206, 228, 0.3);
+    padding: 10px;
+    margin: 2px;
+}
+
+nav#menu li:hover {
+    transition: background-color 0.5s;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+nav#menu li:hover>a {
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
