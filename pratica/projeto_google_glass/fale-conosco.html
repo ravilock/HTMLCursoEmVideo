@@ -7,8 +7,15 @@
     <meta name='viewport' content="width = device-width, initial-scale = 1" />
     <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
     <link rel="stylesheet" type="text/css" href="_css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="_css/form.css" />
 </head>
-<script language="javascript" src="_javascript/funcoes.js">
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function calculaValor() {
+        let qtd = parseInt(document.getElementById("cQuantidade").value)
+        let tot = qtd * 1500 || 0
+        document.getElementById("cTot").value = tot
+    }
 </script>
 
 <body>
@@ -55,9 +62,9 @@
                     <h2>por Gustavo Guanabara</h2>
                     <h3><span>Atualizado em 01/Maio/2013</span></h3>
                 </header>
-                <form method="POST" id="fContato" action="">
-                    <fieldset>
-                        <legend id="usuario">Identificação do Usuário</legend>
+                <form method="POST" id="fContato" oninput="calculaValor()">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"></p>
                         <p><label for="cPass">Senha: </label><input type="password" name="tPass" id="cPass" size="20" maxlength="40" placeholder="Senha"></p>
                         <p><label for="cEmail">E-mail: </label><input type="email" name="tEmail" id="cEmail" size="30" maxlength="50" placeholder="Email"></p>
@@ -70,7 +77,7 @@
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
                         <p><label for="cLogradouro">Logradouro: </label><input type="text" name="tLogradouro" id="cLogradouro" size="30" maxlength="180" placeholder="Rua, Av., Trav."></p>
-                        <p><label for="cNumero">Número: </label><input type="number" name="tNumero" id="cNumero" sie="10" size="20" min="0" max="999999" placeholder="Número"></p>
+                        <p><label for="cNumero">Número: </label><input type="number" name="tNumero" id="cNumero" size="10" size="20" min="0" max="999999" placeholder="Número"></p>
                         <p><label for="cEstado">Estado: </label><select name="tEstado" id="cEstado">
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -109,12 +116,17 @@
                     </fieldset>
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                        <p>Gostaria de adquirir um Google Glass quando disponível</br><input type="radio" name="cAdq" id="cAdqS"/><label for="cAdqS">Sim</label></br>
+                            <input type="radio" name="cAdq" id="cAdqN"/><label for="cAdqN">Não</label></p>
+                            <p><label for="cCor">Cor: </label><select name="tCor" id="cCor">
+                                <option value="Preto" selected>Preto</option>
+                                <option value="Branco">Branco</option>
+                                <option value="Cinza">Cinza</option>
+                            </select></p>
+                        <p><label for="cQuantidade">Quantidade: </label><input type="number" name="tQuantidade" id="cQuantidade" size="10" size="20" min="0" max="999999" placeholder="Quantidade"></p>
+                        <p><label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
                     </fieldset>
-                    [BOTÃO ENVIAR]
+                    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png"/>
                 </form>
             </article>
         </section>
